@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "reportproject": "StartDebugging",
+        "frontend": "StartWithoutDebugging",
+        "keycloak": "StartWithoutDebugging",
+        "keycloak_db": "StartWithoutDebugging"
+      }
+    }
+  }
+}

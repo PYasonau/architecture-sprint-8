@@ -1,0 +1,6 @@
+@ReportProject_HostAddress = http://localhost:5224
+
+GET {{ReportProject_HostAddress}}/reports/
+Accept: application/json
+
+###

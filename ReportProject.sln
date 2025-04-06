@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{8A758413-DCC7-4155-8409-FEE62B9CC94E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReportApiProject", "API\ReportApiProject.csproj", "{CC7D732C-9E10-425B-994B-F83776F0A029}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "frontend", "frontend", "{6A757EF3-F621-4770-BEDD-42072E76D226}"
+	ProjectSection(SolutionItems) = preProject
+		frontend\.env = frontend\.env
+		frontend\.gitignore = frontend\.gitignore
+		frontend\Dockerfile = frontend\Dockerfile
+		frontend\nginx.conf = frontend\nginx.conf
+		frontend\package-lock.json = frontend\package-lock.json
+		frontend\package.json = frontend\package.json
+		frontend\postcss.config.js = frontend\postcss.config.js
+		frontend\tailwind.config.js = frontend\tailwind.config.js
+		frontend\tsconfig.json = frontend\tsconfig.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "keycloak", "keycloak", "{35087ABD-9A29-4B58-A044-10C5FE74AC4C}"
+	ProjectSection(SolutionItems) = preProject
+		keycloak\realm-export.json = keycloak\realm-export.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{99AC43DB-742A-4E94-8C0C-EAE7F703A20F}"
+	ProjectSection(SolutionItems) = preProject
+		frontend\src\App.tsx = frontend\src\App.tsx
+		frontend\src\index.css = frontend\src\index.css
+		frontend\src\index.tsx = frontend\src\index.tsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{A9995B9F-A7AF-47F2-86A3-589C7B25F47F}"
+	ProjectSection(SolutionItems) = preProject
+		frontend\src\components\ReportPage.tsx = frontend\src\components\ReportPage.tsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "public", "public", "{61032ED0-E137-4782-9E30-E16D6B8823A2}"
+	ProjectSection(SolutionItems) = preProject
+		frontend\public\index.html = frontend\public\index.html
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A960C37E-4CB3-4726-9046-EDF03533C6EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC7D732C-9E10-425B-994B-F83776F0A029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC7D732C-9E10-425B-994B-F83776F0A029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC7D732C-9E10-425B-994B-F83776F0A029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC7D732C-9E10-425B-994B-F83776F0A029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A960C37E-4CB3-4726-9046-EDF03533C6EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A960C37E-4CB3-4726-9046-EDF03533C6EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A960C37E-4CB3-4726-9046-EDF03533C6EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A960C37E-4CB3-4726-9046-EDF03533C6EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CC7D732C-9E10-425B-994B-F83776F0A029} = {8A758413-DCC7-4155-8409-FEE62B9CC94E}
+		{99AC43DB-742A-4E94-8C0C-EAE7F703A20F} = {6A757EF3-F621-4770-BEDD-42072E76D226}
+		{A9995B9F-A7AF-47F2-86A3-589C7B25F47F} = {99AC43DB-742A-4E94-8C0C-EAE7F703A20F}
+		{61032ED0-E137-4782-9E30-E16D6B8823A2} = {6A757EF3-F621-4770-BEDD-42072E76D226}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8AC74DA0-9735-427F-AA7A-3158E3DABD0F}
+	EndGlobalSection
+EndGlobal

@@ -6,29 +6,40 @@ const ReportPage: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const downloadReport = async () => {
-    if (!keycloak?.token) {
-      setError('Not authenticated');
-      return;
-    }
-
-    try {
-      setLoading(true);
-      setError(null);
-
-      const response = await fetch(`${process.env.REACT_APP_API_URL}/reports`, {
-        headers: {
-          'Authorization': `Bearer ${keycloak.token}`
+    const downloadReport = async () => {
+        if (!keycloak?.token) {
+		
+            setError('Not authenticated');
+            return;
         }
-      });
 
-      
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred');
-    } finally {
-      setLoading(false);
-    }
-  };
+        try {
+            setLoading(true);
+            setError(null);
+			console.log("JWT Token:", keycloak.token);
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/api/reports`, {
+                headers: {
+                    'Authorization': `Bearer ${keycloak.token}`
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'report.json';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        } catch (err) {
+            setError(err instanceof Error ? err.message : 'An error occurred');
+        } finally {
+            setLoading(false);
+        }
+    };
 
   if (!initialized) {
     return <div>Loading...</div>;
